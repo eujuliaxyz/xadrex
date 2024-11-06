@@ -3,7 +3,7 @@ class Tabuleiro {
         this.nome = "Tabuleiro";
         this.tabuleiro = [];
 
-        // Inicializando o tabuleiro com 8x8 casas
+        
         for (let linha = 0; linha < 8; linha++) {
             this.tabuleiro[linha] = [];
             for (let coluna = 0; coluna < 8; coluna++) {
@@ -16,7 +16,7 @@ class Tabuleiro {
     colocarPeca(peca, linha, coluna) {
         const casa = this.tabuleiro[linha][coluna];
         casa.peca = peca;
-        casa.elementoHtml.innerHTML = peca.simbolo; // Colocando o símbolo da peça na casa
+        casa.elementoHtml.innerHTML = peca.simbolo; 
     }
 }
 
@@ -57,7 +57,7 @@ class Peca {
     }
 }
 
-// Definindo classes para as diferentes peças de xadrez
+
 
 class Rei extends Peca {
     constructor(cor, linha, coluna) {
@@ -101,24 +101,22 @@ class Peao extends Peca {
     }
 }
 
-// Criando o tabuleiro
+
 const tabuleiro = new Tabuleiro();
 
-// Colocando as peças no tabuleiro
 
-// 8 Peões brancos na linha 1 (segunda linha)
+
 for (let coluna = 0; coluna < 8; coluna++) {
     const peaoBranco = new Peao('branca', 1, coluna);
     tabuleiro.colocarPeca(peaoBranco, 1, coluna);
 }
 
-// 8 Peões pretos na linha 6 (sétima linha)
+ 
 for (let coluna = 0; coluna < 8; coluna++) {
     const peaoPreto = new Peao('preta', 6, coluna);
     tabuleiro.colocarPeca(peaoPreto, 6, coluna);
 }
 
-// Colocando as peças maiores
 tabuleiro.colocarPeca(new Rei('branca', 0, 4), 0, 4);     // Rei branco
 tabuleiro.colocarPeca(new Rei('preta', 7, 4), 7, 4);     // Rei preto
 
