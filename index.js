@@ -42,6 +42,12 @@ class Casa {
         this.elementoHtml.addEventListener('click', () => {
             tabuleiro.clicarCasa(this);
         })
+    
+    setPeca(peca) {
+        this.peca = peca;
+        this.elementoHtml.innerHTML = peca ? pecasBrancas.simbolo: ''.
+    }
+    
     }
 }
 
