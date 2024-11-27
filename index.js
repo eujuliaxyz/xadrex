@@ -45,7 +45,7 @@ class Casa {
     
     setPeca(peca) {
         this.peca = peca;
-        this.elementoHtml.innerHTML = peca ? pecasBrancas.simbolo: ''.
+        this.elementoHtml.innerHTML = peca ? pecasBrancas.simbolo: '';
     }
     
     }
